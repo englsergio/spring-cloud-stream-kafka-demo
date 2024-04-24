@@ -1,0 +1,10 @@
+spring:
+  profiles:
+    active: @spring.profile.activated@
+  cloud:
+    function:
+      definition: consumeLoan
+    stream:
+      bindings:
+        consumeLoan-in-0:
+          destination: consumer-topic

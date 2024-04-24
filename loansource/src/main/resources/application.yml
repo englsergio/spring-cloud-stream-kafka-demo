@@ -1,0 +1,10 @@
+spring:
+  profiles:
+    active: @spring.profile.activated@
+  cloud:
+    function:
+      definition: supplyLoan
+    stream:
+      bindings:
+        supplyLoan-out-0:
+          destination: supply-topic
